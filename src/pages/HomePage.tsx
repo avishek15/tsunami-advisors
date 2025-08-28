@@ -9,8 +9,82 @@ import {
     BarChart3,
     GraduationCap,
 } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function HomePage() {
+    // Structured data for the organization
+    const organizationStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Tsunami Advisors",
+        url: "https://tsunamiadvisors.com",
+        logo: "https://tsunamiadvisors.com/ta-logo.png",
+        description:
+            "Leading AI consulting firm specializing in AI transformation strategy, go-to-market execution, and predictive analytics for businesses.",
+        address: {
+            "@type": "PostalAddress",
+            addressCountry: "US",
+        },
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer service",
+            email: "contact@tsunamiadvisors.com",
+        },
+        sameAs: ["https://linkedin.com/company/tsunami-advisors"],
+    };
+
+    // Structured data for the services
+    const servicesStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "AI Consulting Services",
+        description:
+            "Comprehensive AI consulting services offered by Tsunami Advisors",
+        itemListElement: [
+            {
+                "@type": "Service",
+                position: 1,
+                name: "AI Transformation Strategy",
+                description:
+                    "Tailored strategies to integrate AI into your operations, enhancing efficiency, decision-making, and customer experiences.",
+            },
+            {
+                "@type": "Service",
+                position: 2,
+                name: "Go to Market Strategy & Execution",
+                description:
+                    "Comprehensive go-to-market strategy to effectively launch and position your AI initiatives in the market.",
+            },
+            {
+                "@type": "Service",
+                position: 3,
+                name: "Investor Relations",
+                description:
+                    "Help you communicate your AI vision effectively to attract and retain investors who share your ambition.",
+            },
+            {
+                "@type": "Service",
+                position: 4,
+                name: "AI Agents & Automation",
+                description:
+                    "Automate routine tasks and enhance productivity with AI-driven solutions tailored to your business needs.",
+            },
+            {
+                "@type": "Service",
+                position: 5,
+                name: "AI Data Analysis & Predictive Analytics",
+                description:
+                    "Unlock the power of your data with advanced analytics and predictive modeling for informed decisions.",
+            },
+            {
+                "@type": "Service",
+                position: 6,
+                name: "AI Training",
+                description:
+                    "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
+            },
+        ],
+    };
     const services = [
         {
             icon: Brain,
@@ -81,185 +155,201 @@ export default function HomePage() {
     ];
 
     return (
-        <div>
-            {/* Hero Section */}
-            <section className="hero section--hero">
-                {/* Background Video/Image Container */}
-                <div className="hero__background">
-                    <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="auto"
-                        onError={(e) => console.error("Video error:", e)}
-                        onLoadStart={() => console.log("Video loading started")}
-                        onCanPlay={() => console.log("Video can play")}
-                        style={{ backgroundColor: "#f0f0f0" }}
-                    >
-                        <source
-                            src="/hero-video-placeholder.mp4"
-                            type="video/mp4"
-                        />
-                        <source
-                            src="./hero-video-placeholder.mp4"
-                            type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-                {/* Overlay for readability */}
-                <div className="hero__overlay"></div>
-
-                <div className="container">
-                    <div className="hero__content text-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
+        <>
+            <SEO
+                title="AI & Tech Consulting Services"
+                description="Transform your business with Tsunami Advisors' expert AI consulting services. We specialize in AI transformation strategy, go-to-market execution, predictive analytics, and AI training. Get started with your AI journey today."
+                keywords="AI consulting, artificial intelligence consulting, AI transformation strategy, go-to-market strategy, predictive analytics, AI training, business automation, AI implementation, technology consulting"
+                canonical="/"
+                structuredData={[
+                    organizationStructuredData,
+                    servicesStructuredData,
+                ]}
+            />
+            <div>
+                {/* Hero Section */}
+                <section className="hero section--hero">
+                    {/* Background Video/Image Container */}
+                    <div className="hero__background">
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
+                            onError={(e) => console.error("Video error:", e)}
+                            onLoadStart={() =>
+                                console.log("Video loading started")
+                            }
+                            onCanPlay={() => console.log("Video can play")}
+                            style={{ backgroundColor: "#f0f0f0" }}
                         >
-                            <h1 className="text-hero">
-                                Transforming the Future of{" "}
-                                <span className="text-accent">AI and Tech</span>
-                            </h1>
-                            <p className="text-body-large text-muted hero__description">
-                                We guide firms through the AI and tech
-                                landscape, empowering businesses to harness the
-                                transformative potential of artificial
-                                intelligence.
-                            </p>
-                            <div className="btn-group">
-                                <motion.button
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    className="btn btn--primary"
-                                >
-                                    Get Started
-                                </motion.button>
-                                <Link to="/services">
+                            <source
+                                src="/hero-video-placeholder.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./hero-video-placeholder.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    {/* Overlay for readability */}
+                    <div className="hero__overlay"></div>
+
+                    <div className="container">
+                        <div className="hero__content text-center">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                <h1 className="text-hero">
+                                    Transforming the Future of{" "}
+                                    <span className="text-accent">
+                                        AI and Tech
+                                    </span>
+                                </h1>
+                                <p className="text-body-large text-muted hero__description">
+                                    We guide firms through the AI and tech
+                                    landscape, empowering businesses to harness
+                                    the transformative potential of artificial
+                                    intelligence.
+                                </p>
+                                <div className="btn-group">
                                     <motion.button
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        className="btn btn--secondary"
+                                        className="btn btn--primary"
                                     >
-                                        Learn More
+                                        Get Started
                                     </motion.button>
-                                </Link>
-                            </div>
-                        </motion.div>
-                    </div>
-
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                        className="scroll-indicator"
-                    >
-                        <motion.div
-                            animate={{ y: [0, 8, 0] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                        >
-                            <ChevronDown size={28} />
-                        </motion.div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Services Grid Section */}
-            <section className="section">
-                <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="text-center"
-                        style={{ marginBottom: "var(--space-4xl)" }}
-                    >
-                        <h2 className="text-heading">Our Services</h2>
-                        <p className="text-body-large text-muted">
-                            Comprehensive AI consulting services designed to
-                            transform your business and drive innovation
-                        </p>
-                    </motion.div>
-
-                    <div className="services-grid">
-                        {services.map((service, index) => (
-                            <div
-                                key={service.title}
-                                className="service-card card"
-                                style={{
-                                    animationDelay: `${index * 0.1}s`,
-                                }}
-                            >
-                                <div className="service-card__icon">
-                                    <service.icon size={28} />
+                                    <Link to="/services">
+                                        <motion.button
+                                            whileHover={{ scale: 1.02 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            className="btn btn--secondary"
+                                        >
+                                            Learn More
+                                        </motion.button>
+                                    </Link>
                                 </div>
-                                <h3 className="text-subheading service-card__title">
-                                    {service.title}
-                                </h3>
-                                <p className="text-body text-muted service-card__description">
-                                    {service.description}
-                                </p>
-                                <ul className="service-card__features">
-                                    {service.features.map(
-                                        (feature, featureIndex) => (
-                                            <li
-                                                key={featureIndex}
-                                                className="service-card__feature"
-                                            >
-                                                <span className="service-card__bullet"></span>
-                                                {feature}
-                                            </li>
-                                        )
-                                    )}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Choose Us Section */}
-            <section className="cta-section section">
-                <div className="container">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="text-center"
-                        style={{ marginBottom: "var(--space-4xl)" }}
-                    >
-                        <h2 className="text-heading">
-                            Why Choose Tsunami Advisors?
-                        </h2>
-                        <p className="text-body-large">
-                            We bring expertise, tailored solutions, and proven
-                            results to every engagement
-                        </p>
-                    </motion.div>
-
-                    <div className="why-choose-grid">
-                        {whyChooseUs.map((reason, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{
-                                    duration: 0.6,
-                                    delay: index * 0.2,
-                                }}
-                                viewport={{ once: true }}
-                                className="why-choose-card"
-                            >
-                                <p className="text-body">{reason}</p>
                             </motion.div>
-                        ))}
+                        </div>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                            className="scroll-indicator"
+                        >
+                            <motion.div
+                                animate={{ y: [0, 8, 0] }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                            >
+                                <ChevronDown size={28} />
+                            </motion.div>
+                        </motion.div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+
+                {/* Services Grid Section */}
+                <section className="section">
+                    <div className="container">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="text-center"
+                            style={{ marginBottom: "var(--space-4xl)" }}
+                        >
+                            <h2 className="text-heading">Our Services</h2>
+                            <p className="text-body-large text-muted">
+                                Comprehensive AI consulting services designed to
+                                transform your business and drive innovation
+                            </p>
+                        </motion.div>
+
+                        <div className="services-grid">
+                            {services.map((service, index) => (
+                                <div
+                                    key={service.title}
+                                    className="service-card card"
+                                    style={{
+                                        animationDelay: `${index * 0.1}s`,
+                                    }}
+                                >
+                                    <div className="service-card__icon">
+                                        <service.icon size={28} />
+                                    </div>
+                                    <h3 className="text-subheading service-card__title">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-body text-muted service-card__description">
+                                        {service.description}
+                                    </p>
+                                    <ul className="service-card__features">
+                                        {service.features.map(
+                                            (feature, featureIndex) => (
+                                                <li
+                                                    key={featureIndex}
+                                                    className="service-card__feature"
+                                                >
+                                                    <span className="service-card__bullet"></span>
+                                                    {feature}
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Why Choose Us Section */}
+                <section className="cta-section section">
+                    <div className="container">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="text-center"
+                            style={{ marginBottom: "var(--space-4xl)" }}
+                        >
+                            <h2 className="text-heading">
+                                Why Choose Tsunami Advisors?
+                            </h2>
+                            <p className="text-body-large">
+                                We bring expertise, tailored solutions, and
+                                proven results to every engagement
+                            </p>
+                        </motion.div>
+
+                        <div className="why-choose-grid">
+                            {whyChooseUs.map((reason, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        duration: 0.6,
+                                        delay: index * 0.2,
+                                    }}
+                                    viewport={{ once: true }}
+                                    className="why-choose-card"
+                                >
+                                    <p className="text-body">{reason}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </>
     );
 }

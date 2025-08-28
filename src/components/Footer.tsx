@@ -2,18 +2,24 @@ import { Mail } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer" role="contentinfo" aria-label="Site footer">
             <div className="container">
                 <div className="footer__grid">
                     <div className="footer__section">
                         <div
-                            className="logo"
+                            className="logo footer-logo"
                             style={{ marginBottom: "var(--space-lg)" }}
                         >
-                            <div className="logo__icon">
-                                <span>T</span>
-                            </div>
-                            <span className="logo__text">Tsunami Advisors</span>
+                            <img
+                                src="/ta-logo.png"
+                                alt="Tsunami Advisors Logo"
+                                className="logo__insignia"
+                            />
+                            <img
+                                src="/ta-text.png"
+                                alt="Tsunami Advisors"
+                                className="logo__text-image"
+                            />
                         </div>
                         <p className="text-body text-muted">
                             Transforming the future of AI and tech through
@@ -24,21 +30,29 @@ export default function Footer() {
                     <div className="footer__section">
                         <h3 className="text-subheading">Contact Information</h3>
                         <div className="contact-item">
-                            <Mail size={18} />
-                            <span>info@tsunamiadvisors.com</span>
+                            <Mail size={18} aria-hidden="true" />
+                            <a
+                                href="mailto:info@tsunamiadvisors.com"
+                                className="footer__link"
+                            >
+                                info@tsunamiadvisors.com
+                            </a>
                         </div>
                     </div>
 
                     <div className="footer__section">
                         <h3 className="text-subheading">Quick Links</h3>
-                        <div className="footer__links">
+                        <nav
+                            className="footer__links"
+                            aria-label="Footer navigation"
+                        >
                             <a href="/apps" className="footer__link">
                                 Apps
                             </a>
                             <a href="/contact" className="footer__link">
                                 Contact
                             </a>
-                        </div>
+                        </nav>
                     </div>
                 </div>
 

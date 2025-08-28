@@ -9,7 +9,7 @@
     /* Colors - Three-color system */
     --color-text: #1e293b;
     --color-background: #ffffff;
-    --color-accent: #0284c7;
+    --color-accent: #0604fb;
     --color-text-muted: #64748b;
 
     /* Spacing Scale */
@@ -304,36 +304,55 @@ body {
     color: var(--color-accent);
 }
 
-.logo__icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--color-accent);
-    border-radius: var(--radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-background);
-    font-weight: 700;
-    font-size: var(--font-size-lg);
+.logo__insignia {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
     flex-shrink: 0;
 }
 
-.logo__text {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    white-space: nowrap;
+.logo__text-image {
+    height: 6rem;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 0.25rem;
 }
 
-@media (max-width: 480px) {
-    .logo__text {
+/* Mobile: Show only insignia */
+@media (max-width: 767px) {
+    .logo__text-image {
         display: none;
     }
+
+    .logo__insignia {
+        height: 3rem;
+    }
 }
 
-@media (min-width: 481px) and (max-width: 640px) {
-    .logo__text {
-        font-size: var(--font-size-lg);
+/* Desktop: Show both insignia and text */
+@media (min-width: 768px) {
+    .logo__text-image {
+        display: block;
+        height: 6rem;
     }
+
+    .logo__insignia {
+        height: 3rem;
+    }
+}
+
+/* Footer logo always shows both insignia and text */
+.footer-logo .logo__text-image {
+    display: block !important;
+    height: 5.5rem !important;
+    margin-left: 0.25rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footer-logo .logo__insignia {
+    height: 3.5rem !important;
 }
 
 .nav {
@@ -574,7 +593,7 @@ body {
 }
 
 .cta-section {
-    background-color: var(--color-accent);
+    background-color: rgba(6, 4, 251, 0.8);
     color: var(--color-background);
 }
 
@@ -790,16 +809,18 @@ body {
 }
 
 .why-choose-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(6, 4, 251, 0.5);
+    border: 1px solid #e5e7eb;
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .why-choose-card:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #0a1a3f;
     transform: translateY(-4px);
 }
 

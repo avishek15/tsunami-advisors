@@ -23,7 +23,11 @@ export default function Header() {
     }, []);
 
     return (
-        <header className={`header ${isScrolled ? "header--scrolled" : ""}`}>
+        <header
+            className={`header ${isScrolled ? "header--scrolled" : ""}`}
+            role="banner"
+            aria-label="Main navigation"
+        >
             <div className="container">
                 <div className="header__content">
                     <motion.div
@@ -31,11 +35,21 @@ export default function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <Link to="/" className="logo">
-                            <div className="logo__icon">
-                                <span>T</span>
-                            </div>
-                            <span className="logo__text">Tsunami Advisors</span>
+                        <Link
+                            to="/"
+                            className="logo"
+                            aria-label="Tsunami Advisors Homepage"
+                        >
+                            <img
+                                src="/ta-logo.png"
+                                alt="Tsunami Advisors Logo"
+                                className="logo__insignia"
+                            />
+                            <img
+                                src="/ta-text.png"
+                                alt="Tsunami Advisors"
+                                className="logo__text-image"
+                            />
                         </Link>
                     </motion.div>
 
@@ -44,12 +58,15 @@ export default function Header() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="nav"
+                        role="navigation"
+                        aria-label="Main navigation menu"
                     >
                         <Link
                             to="/"
                             className={`nav__link ${
                                 isActive("/") ? "nav__link--active" : ""
                             }`}
+                            aria-current={isActive("/") ? "page" : undefined}
                         >
                             Home
                         </Link>
@@ -58,6 +75,9 @@ export default function Header() {
                             className={`nav__link ${
                                 isActive("/apps") ? "nav__link--active" : ""
                             }`}
+                            aria-current={
+                                isActive("/apps") ? "page" : undefined
+                            }
                         >
                             Apps
                         </Link>
@@ -66,6 +86,9 @@ export default function Header() {
                             className={`nav__link ${
                                 isActive("/contact") ? "nav__link--active" : ""
                             }`}
+                            aria-current={
+                                isActive("/contact") ? "page" : undefined
+                            }
                         >
                             Contact
                         </Link>
@@ -79,6 +102,8 @@ export default function Header() {
                         className="mobile-menu-btn"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle mobile menu"
+                        aria-expanded={isMobileMenuOpen}
+                        aria-controls="mobile-menu"
                     >
                         {isMobileMenuOpen ? (
                             <X size={24} />
@@ -95,6 +120,9 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         className="mobile-menu"
+                        id="mobile-menu"
+                        role="navigation"
+                        aria-label="Mobile navigation menu"
                     >
                         <Link
                             to="/"
@@ -102,6 +130,7 @@ export default function Header() {
                                 isActive("/") ? "mobile-menu__link--active" : ""
                             }`}
                             onClick={() => setIsMobileMenuOpen(false)}
+                            aria-current={isActive("/") ? "page" : undefined}
                         >
                             Home
                         </Link>
@@ -113,6 +142,9 @@ export default function Header() {
                                     : ""
                             }`}
                             onClick={() => setIsMobileMenuOpen(false)}
+                            aria-current={
+                                isActive("/apps") ? "page" : undefined
+                            }
                         >
                             Apps
                         </Link>
@@ -124,6 +156,9 @@ export default function Header() {
                                     : ""
                             }`}
                             onClick={() => setIsMobileMenuOpen(false)}
+                            aria-current={
+                                isActive("/contact") ? "page" : undefined
+                            }
                         >
                             Contact
                         </Link>
