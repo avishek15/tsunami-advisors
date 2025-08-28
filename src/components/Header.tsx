@@ -40,16 +40,22 @@ export default function Header() {
                             className="logo"
                             aria-label="Tsunami Advisors Homepage"
                         >
-                            <img
-                                src="/ta-logo.png"
-                                alt="Tsunami Advisors Logo"
-                                className="logo__insignia"
-                            />
-                            <img
-                                src="/ta-text.png"
-                                alt="Tsunami Advisors"
-                                className="logo__text-image"
-                            />
+                            <picture>
+                                <source srcSet="/ta-logo.webp" type="image/webp" />
+                                <img
+                                    src="/ta-logo.png"
+                                    alt="Tsunami Advisors Logo"
+                                    className="logo__insignia"
+                                />
+                            </picture>
+                            <picture>
+                                <source srcSet="/ta-text.webp" type="image/webp" />
+                                <img
+                                    src="/ta-text.png"
+                                    alt="Tsunami Advisors"
+                                    className="logo__text-image"
+                                />
+                            </picture>
                         </Link>
                     </motion.div>
 

@@ -10,16 +10,22 @@ export default function Footer() {
                             className="logo footer-logo"
                             style={{ marginBottom: "var(--space-lg)" }}
                         >
-                            <img
-                                src="/ta-logo.png"
-                                alt="Tsunami Advisors Logo"
-                                className="logo__insignia"
-                            />
-                            <img
-                                src="/ta-text.png"
-                                alt="Tsunami Advisors"
-                                className="logo__text-image"
-                            />
+                            <picture>
+                                <source srcSet="/ta-logo.webp" type="image/webp" />
+                                <img
+                                    src="/ta-logo.png"
+                                    alt="Tsunami Advisors Logo"
+                                    className="logo__insignia"
+                                />
+                            </picture>
+                            <picture>
+                                <source srcSet="/ta-text.webp" type="image/webp" />
+                                <img
+                                    src="/ta-text.png"
+                                    alt="Tsunami Advisors"
+                                    className="logo__text-image"
+                                />
+                            </picture>
                         </div>
                         <p className="text-body text-muted">
                             Transforming the future of AI and tech through
