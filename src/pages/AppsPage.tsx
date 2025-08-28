@@ -108,16 +108,12 @@ export default function AppsPage() {
 
                     <div className="apps-grid">
                         {apps.map((app, index) => (
-                            <motion.div
+                            <div
                                 key={app.title}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{
-                                    duration: 0.6,
-                                    delay: index * 0.1,
-                                }}
-                                viewport={{ once: true }}
                                 className="app-card card"
+                                style={{
+                                    animationDelay: `${index * 0.1}s`
+                                }}
                             >
                                 <div className="app-card__icon">
                                     <app.icon size={28} />
@@ -136,7 +132,7 @@ export default function AppsPage() {
                                         Learn More →
                                     </button>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>

@@ -110,16 +110,12 @@ export default function ServicesPage() {
                 <div className="container">
                     <div className="services-grid">
                         {services.map((service, index) => (
-                            <motion.div
+                            <div
                                 key={service.title}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{
-                                    duration: 0.6,
-                                    delay: index * 0.1,
-                                }}
-                                viewport={{ once: true }}
                                 className="service-card card"
+                                style={{
+                                    animationDelay: `${index * 0.1}s`
+                                }}
                             >
                                 <div className="service-card__icon">
                                     <service.icon size={28} />
@@ -143,7 +139,7 @@ export default function ServicesPage() {
                                         )
                                     )}
                                 </ul>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
