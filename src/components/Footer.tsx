@@ -32,9 +32,6 @@ export default function Footer() {
                     <div className="footer__section">
                         <h3 className="text-subheading">Quick Links</h3>
                         <div className="footer__links">
-                            <a href="/services" className="footer__link">
-                                Services
-                            </a>
                             <a href="/apps" className="footer__link">
                                 Apps
                             </a>

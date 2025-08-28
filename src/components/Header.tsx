@@ -54,14 +54,6 @@ export default function Header() {
                             Home
                         </Link>
                         <Link
-                            to="/services"
-                            className={`nav__link ${
-                                isActive("/services") ? "nav__link--active" : ""
-                            }`}
-                        >
-                            Services
-                        </Link>
-                        <Link
                             to="/apps"
                             className={`nav__link ${
                                 isActive("/apps") ? "nav__link--active" : ""
@@ -112,17 +104,6 @@ export default function Header() {
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Home
-                        </Link>
-                        <Link
-                            to="/services"
-                            className={`mobile-menu__link ${
-                                isActive("/services")
-                                    ? "mobile-menu__link--active"
-                                    : ""
-                            }`}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            Services
                         </Link>
                         <Link
                             to="/apps"
