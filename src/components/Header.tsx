@@ -22,9 +22,13 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const isHomePage = location.pathname === "/";
+
     return (
         <header
-            className={`header ${isScrolled ? "header--scrolled" : ""}`}
+            className={`header ${isScrolled ? "header--scrolled" : ""} ${
+                isHomePage ? "header--home" : ""
+            }`}
             role="banner"
             aria-label="Main navigation"
         >

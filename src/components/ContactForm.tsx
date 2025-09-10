@@ -292,20 +292,17 @@ export default function ContactForm() {
                         disabled={formState.isSubmitting}
                     >
                         <option value="">Select a service</option>
-                        <option value="ai-transformation">
-                            AI Transformation Strategy
+                        <option value="ai-strategy-investor-relations">
+                            AI Strategy & Investor Relations
                         </option>
                         <option value="go-to-market">
                             Go to Market Strategy
                         </option>
-                        <option value="investor-relations">
-                            Investor Relations
+                        <option value="new-ai-business-models">
+                            New AI Business Models
                         </option>
-                        <option value="ai-agents">
-                            AI Agents & Automation
-                        </option>
-                        <option value="data-analytics">
-                            Data Analysis & Analytics
+                        <option value="ai-agents-tools-automation">
+                            AI Agents, Tools & Automation
                         </option>
                         <option value="ai-training">AI Training</option>
                         <option value="other">Other</option>

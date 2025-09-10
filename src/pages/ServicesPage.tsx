@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import {
     Brain,
     Target,
-    Users,
     Bot,
-    BarChart3,
     GraduationCap,
+    Lightbulb,
 } from "lucide-react";
 import SEO from "../components/SEO";
 
@@ -21,9 +20,9 @@ export default function ServicesPage() {
             {
                 "@type": "Service",
                 position: 1,
-                name: "AI Transformation Strategy",
+                name: "AI Strategy & Investor Relations",
                 description:
-                    "Tailored strategies to integrate AI into your operations, enhancing efficiency, decision-making, and customer experiences.",
+                    "Comprehensive AI transformation strategies combined with investor relations expertise to help you integrate AI into your operations and communicate your vision effectively to attract and retain investors.",
             },
             {
                 "@type": "Service",
@@ -35,23 +34,16 @@ export default function ServicesPage() {
             {
                 "@type": "Service",
                 position: 3,
-                name: "Investor Relations",
+                name: "New AI Business Models",
                 description:
-                    "Help you communicate your AI vision effectively to attract and retain investors who share your ambition.",
+                    "Develop innovative AI-driven business models and revenue streams that leverage artificial intelligence to create new value propositions and competitive advantages.",
             },
             {
                 "@type": "Service",
                 position: 4,
-                name: "AI Agents & Automation",
+                name: "AI Agents, Tools & Automation",
                 description:
-                    "Automate routine tasks and enhance productivity with AI-driven solutions tailored to your business needs.",
-            },
-            {
-                "@type": "Service",
-                position: 5,
-                name: "AI Data Analysis & Predictive Analytics",
-                description:
-                    "Unlock the power of your data with advanced analytics and predictive modeling for informed decisions.",
+                    "Comprehensive AI-driven operations automation combined with advanced data analytics and predictive modeling to optimize business processes and unlock data-driven insights.",
             },
             {
                 "@type": "Service",
@@ -65,12 +57,14 @@ export default function ServicesPage() {
     const services = [
         {
             icon: Brain,
-            title: "AI Transformation Strategy",
+            title: "AI Strategy & Investor Relations",
             description:
-                "Tailored strategies to integrate AI into your operations, enhancing efficiency, decision-making, and customer experiences.",
+                "Comprehensive AI transformation strategies combined with investor relations expertise to help you integrate AI into your operations and communicate your vision effectively to attract and retain investors.",
             features: [
                 "AI Strategy Development: We collaborate with you to create a robust AI strategy that aligns with your business goals.",
                 "Implementation Roadmaps: Our detailed roadmaps outline the steps necessary to integrate AI technologies.",
+                "Pitch Development: Craft compelling narratives that highlight your AI initiatives and their market potential.",
+                "Stakeholder Engagement: Build strong relationships with investors through transparent communication.",
             ],
         },
         {
@@ -81,34 +75,30 @@ export default function ServicesPage() {
             features: [
                 "Market Insights and Value Proposition: Conduct thorough market analysis and craft compelling value propositions.",
                 "Commercialization and Performance Metrics: Execute structured commercialization plans with KPIs to measure success.",
+                "Customer Segmentation and Targeting: Identify and segment target customer groups to optimize marketing and sales efforts.",
+                "Competitive Positioning and Launch Strategy: Develop strategic positioning against competitors and execute comprehensive launch plans.",
             ],
         },
         {
-            icon: Users,
-            title: "Investor Relations",
+            icon: Lightbulb,
+            title: "New AI Business Models",
             description:
-                "Help you communicate your AI vision effectively to attract and retain investors who share your ambition.",
+                "Develop innovative AI-driven business models and revenue streams that leverage artificial intelligence to create new value propositions and competitive advantages.",
             features: [
-                "Pitch Development: Craft compelling narratives that highlight your AI initiatives and their market potential.",
-                "Stakeholder Engagement: Build strong relationships with investors through transparent communication.",
+                "Business Model Innovation: Design new revenue streams and value propositions powered by AI technologies.",
+                "Market Disruption Strategy: Identify opportunities to disrupt traditional markets with AI-driven solutions.",
+                "Revenue Optimization: Develop pricing strategies and monetization models for AI-powered products and services.",
+                "Partnership and Ecosystem Development: Build strategic partnerships and ecosystems to support new AI business models.",
             ],
         },
         {
             icon: Bot,
-            title: "AI Agents & Automation",
+            title: "AI Agents, Tools & Automation",
             description:
-                "Automate routine tasks and enhance productivity with AI-driven solutions tailored to your business needs.",
+                "Comprehensive AI-driven operations automation combined with advanced data analytics and predictive modeling to optimize business processes and unlock data-driven insights.",
             features: [
                 "Process Evaluation: Identify processes that can benefit from automation and streamline operations.",
                 "Implementation Support: Ensure a smooth integration of AI agents into your existing workflows.",
-            ],
-        },
-        {
-            icon: BarChart3,
-            title: "AI Data Analysis & Predictive Analytics",
-            description:
-                "Unlock the power of your data with advanced analytics and predictive modeling for informed decisions.",
-            features: [
                 "Data Strategy: Develop a comprehensive strategy for data collection, management, and analysis.",
                 "Predictive Insights: Utilize predictive analytics to foresee trends and make proactive business decisions.",
             ],
@@ -121,6 +111,8 @@ export default function ServicesPage() {
             features: [
                 "Customized Workshops: Tailored sessions that address your specific challenges and opportunities in AI.",
                 "Continuous Learning: Ongoing training options to keep your teams ahead of the curve.",
+                "Leadership Development: Executive training programs to help leaders understand and drive AI transformation.",
+                "Certification Programs: Structured certification paths to validate AI skills and knowledge across your organization.",
             ],
         },
     ];

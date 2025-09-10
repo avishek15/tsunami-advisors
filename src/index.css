@@ -400,6 +400,32 @@ body {
     color: var(--color-background);
 }
 
+/* Header color scheme over dark hero (home page only) */
+.header.header--home:not(.header--scrolled) .logo {
+    color: #ffffff;
+}
+
+.header.header--home:not(.header--scrolled) .nav__link {
+    color: #ffffff;
+}
+
+.header.header--home:not(.header--scrolled) .mobile-menu-btn {
+    color: #ffffff;
+}
+
+/* Ensure colors revert when scrolled on home page */
+.header.header--home.header--scrolled .logo {
+    color: var(--color-text);
+}
+
+.header.header--home.header--scrolled .nav__link {
+    color: var(--color-text);
+}
+
+.header.header--home.header--scrolled .mobile-menu-btn {
+    color: var(--color-text);
+}
+
 @media (min-width: 768px) {
     .mobile-menu-btn {
         display: none;
@@ -566,7 +592,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -580,11 +606,12 @@ body {
 
 .hero__content h1,
 .hero__content p {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero__content .text-muted {
-    color: var(--color-text);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero__description {
@@ -687,6 +714,17 @@ body {
 @media (min-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Center the bottom row when there are 2 cards */
+    .services-grid .service-card:nth-child(4) {
+        grid-column: 1 / 2;
+        justify-self: end;
+    }
+
+    .services-grid .service-card:nth-child(5) {
+        grid-column: 2 / 3;
+        justify-self: start;
     }
 }
 
@@ -883,6 +921,17 @@ body {
 @media (min-width: 1024px) {
     .apps-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Center the bottom row when there are 2 cards */
+    .apps-grid .app-card:nth-child(4) {
+        grid-column: 1 / 2;
+        justify-self: end;
+    }
+
+    .apps-grid .app-card:nth-child(5) {
+        grid-column: 2 / 3;
+        justify-self: start;
     }
 }
 
