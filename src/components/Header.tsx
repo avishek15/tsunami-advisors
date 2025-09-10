@@ -41,7 +41,10 @@ export default function Header() {
                             aria-label="Tsunami Advisors Homepage"
                         >
                             <picture>
-                                <source srcSet="/ta-logo.webp" type="image/webp" />
+                                <source
+                                    srcSet="/ta-logo.webp"
+                                    type="image/webp"
+                                />
                                 <img
                                     src="/ta-logo.png"
                                     alt="Tsunami Advisors Logo"
@@ -49,7 +52,10 @@ export default function Header() {
                                 />
                             </picture>
                             <picture>
-                                <source srcSet="/ta-text.webp" type="image/webp" />
+                                <source
+                                    srcSet="/ta-text.webp"
+                                    type="image/webp"
+                                />
                                 <img
                                     src="/ta-text.png"
                                     alt="Tsunami Advisors"

@@ -6,6 +6,7 @@ import {
     TrendingUp,
     Settings,
     Zap,
+    FileText,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
@@ -73,6 +74,15 @@ export default function AppsPage() {
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web Browser",
             },
+            {
+                "@type": "SoftwareApplication",
+                position: 7,
+                name: "Chat with PDF",
+                description:
+                    "Upload any PDF and chat with it using AI. Ask questions, get summaries, and extract insights from your documents.",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web Browser",
+            },
         ],
     };
     const apps = [
@@ -117,6 +127,14 @@ export default function AppsPage() {
             description:
                 "Evaluate your organization's readiness for AI transformation and get personalized recommendations.",
             status: "Coming Soon",
+        },
+        {
+            icon: FileText,
+            title: "Chat with PDF",
+            description:
+                "Upload any PDF and chat with it using AI. Ask questions, get summaries, and extract insights from your documents.",
+            status: "Live",
+            link: "/chat-pdf",
         },
     ];
 
@@ -201,15 +219,30 @@ export default function AppsPage() {
                                         {app.description}
                                     </p>
                                     <div className="app-card__footer">
-                                        <span className="app-card__status">
+                                        <span
+                                            className={`app-card__status ${
+                                                app.status === "Live"
+                                                    ? "app-card__status--live"
+                                                    : ""
+                                            }`}
+                                        >
                                             {app.status}
                                         </span>
-                                        <button
-                                            disabled
-                                            className="app-card__link"
-                                        >
-                                            Learn More →
-                                        </button>
+                                        {app.link ? (
+                                            <Link
+                                                to={app.link}
+                                                className="app-card__link"
+                                            >
+                                                Launch App →
+                                            </Link>
+                                        ) : (
+                                            <button
+                                                disabled
+                                                className="app-card__link"
+                                            >
+                                                Learn More →
+                                            </button>
+                                        )}
                                     </div>
                                 </div>
                             ))}
