@@ -1,13 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-    Brain,
-    Target,
-    Bot,
-    GraduationCap,
-    Lightbulb,
-} from "lucide-react";
+import { Brain, Target, Bot, GraduationCap, Lightbulb } from "lucide-react";
 import SEO from "../components/SEO";
 
 export default function HomePage() {
