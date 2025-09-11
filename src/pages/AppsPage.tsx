@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import {
     Calculator,
     BarChart3,
@@ -151,7 +152,20 @@ export default function AppsPage() {
             />
             <div>
                 {/* Page Header */}
-                <section className="section section--hero">
+                <section
+                    className="section section--hero"
+                    style={{
+                        backgroundImage:
+                            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        minHeight: "100vh",
+                        display: "flex",
+                        alignItems: "center",
+                        position: "relative",
+                    }}
+                >
                     <div className="container">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -163,15 +177,26 @@ export default function AppsPage() {
                                 paddingBottom: "var(--space-xl)",
                             }}
                         >
-                            <h1 className="text-heading">
+                            <h1
+                                className="text-heading"
+                                style={{
+                                    color: "white",
+                                    textShadow: "0 2px 4px rgba(0, 0, 0, 0.7)",
+                                }}
+                            >
                                 AI-Powered Tools &{" "}
                                 <span className="text-accent">
                                     Applications
                                 </span>
                             </h1>
                             <p
-                                className="text-body-large text-muted"
-                                style={{ maxWidth: "48rem", margin: "0 auto" }}
+                                className="text-body-large"
+                                style={{
+                                    maxWidth: "48rem",
+                                    margin: "0 auto",
+                                    color: "rgba(255, 255, 255, 0.9)",
+                                    textShadow: "0 1px 2px rgba(0, 0, 0, 0.7)",
+                                }}
                             >
                                 Explore our collection of interactive AI tools
                                 designed to help you make informed decisions,
@@ -180,6 +205,29 @@ export default function AppsPage() {
                             </p>
                         </motion.div>
                     </div>
+
+                    {/* Scroll Indicator */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        className="scroll-indicator"
+                        style={{
+                            position: "absolute",
+                            bottom: "var(--space-xl)",
+                            left: "50%",
+                            transform: "translateX(-50%)",
+                            color: "white",
+                            zIndex: 3,
+                        }}
+                    >
+                        <motion.div
+                            animate={{ y: [0, 8, 0] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                        >
+                            <ChevronDown size={28} />
+                        </motion.div>
+                    </motion.div>
                 </section>
 
                 {/* Apps Grid */}

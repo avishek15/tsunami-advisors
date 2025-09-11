@@ -23,11 +23,15 @@ export default function Header() {
     }, []);
 
     const isHomePage = location.pathname === "/";
+    const isAppsPage = location.pathname === "/apps";
+    const isContactPage = location.pathname === "/contact";
 
     return (
         <header
             className={`header ${isScrolled ? "header--scrolled" : ""} ${
                 isHomePage ? "header--home" : ""
+            } ${isAppsPage ? "header--apps" : ""} ${
+                isContactPage ? "header--contact" : ""
             }`}
             role="banner"
             aria-label="Main navigation"

@@ -424,6 +424,42 @@ body {
     color: #ffffff;
 }
 
+/* Header color scheme over dark hero (apps page) */
+.header.header--apps:not(.header--scrolled) .logo {
+    color: #ffffff;
+}
+
+.header.header--apps:not(.header--scrolled) .logo__insignia,
+.header.header--apps:not(.header--scrolled) .logo__text-image {
+    filter: brightness(0) invert(1);
+}
+
+.header.header--apps:not(.header--scrolled) .nav__link {
+    color: #ffffff;
+}
+
+.header.header--apps:not(.header--scrolled) .mobile-menu-btn {
+    color: #ffffff;
+}
+
+/* Header color scheme over dark hero (contact page) */
+.header.header--contact:not(.header--scrolled) .logo {
+    color: #ffffff;
+}
+
+.header.header--contact:not(.header--scrolled) .logo__insignia,
+.header.header--contact:not(.header--scrolled) .logo__text-image {
+    filter: brightness(0) invert(1);
+}
+
+.header.header--contact:not(.header--scrolled) .nav__link {
+    color: #ffffff;
+}
+
+.header.header--contact:not(.header--scrolled) .mobile-menu-btn {
+    color: #ffffff;
+}
+
 /* Ensure colors revert when scrolled on home page */
 .header.header--home.header--scrolled .logo {
     color: var(--color-text);
@@ -434,6 +470,32 @@ body {
 }
 
 .header.header--home.header--scrolled .mobile-menu-btn {
+    color: var(--color-text);
+}
+
+/* Ensure colors revert when scrolled on apps page */
+.header.header--apps.header--scrolled .logo {
+    color: var(--color-text);
+}
+
+.header.header--apps.header--scrolled .nav__link {
+    color: var(--color-text);
+}
+
+.header.header--apps.header--scrolled .mobile-menu-btn {
+    color: var(--color-text);
+}
+
+/* Ensure colors revert when scrolled on contact page */
+.header.header--contact.header--scrolled .logo {
+    color: var(--color-text);
+}
+
+.header.header--contact.header--scrolled .nav__link {
+    color: var(--color-text);
+}
+
+.header.header--contact.header--scrolled .mobile-menu-btn {
     color: var(--color-text);
 }
 
