@@ -1,84 +1,77 @@
-# Deployment Guide - Tsunami Advisors
+# Hostinger Deployment - Fixed Version
 
-## 🚀 **Ready for Hostinger Deployment**
+## 🚀 **Updated Files Ready for Upload**
 
-Your website is built and ready for deployment! All files are in the `dist/` folder.
+Your website is now configured to work properly with Hostinger static hosting. Here's what changed:
 
-## 📁 **Files to Upload**
+### **Key Changes Made:**
 
-Upload **ALL** files from the `dist/` folder to your Hostinger `public_html/` directory:
+1. **✅ Switched to HashRouter** - URLs now use `#` (e.g., `yoursite.com/#/contact`)
+2. **✅ Added .htaccess file** - For Apache server configuration
+3. **✅ Added redirect HTML files** - Fallback for direct URL access
+4. **✅ Updated Vite configuration** - Optimized for static hosting
 
-### **Essential Files:**
+### **Files to Upload to Hostinger:**
 
--   ✅ `.htaccess` - Apache server configuration (IMPORTANT!)
--   ✅ `index.html` - Main application
--   ✅ `contact.html` - Redirect to /#/contact
--   ✅ `services.html` - Redirect to /#/services
--   ✅ `apps.html` - Redirect to /#/apps
+Upload ALL files from the `dist/` folder to your `public_html/` directory:
 
-### **Assets:**
+```
+dist/
+├── .htaccess                    # Apache configuration
+├── index.html                   # Main application
+├── contact.html                 # Redirect to /#/contact
+├── services.html                # Redirect to /#/services
+├── apps.html                    # Redirect to /#/apps
+├── assets/
+│   ├── index-CspihT1K.js       # JavaScript bundle
+│   └── index-DCOeCLF9.css      # CSS bundle
+├── favicon.ico
+├── robots.txt
+├── sitemap.xml
+├── ta-logo.png
+├── ta-logo.webp
+├── ta-text.png
+├── ta-text.webp
+├── ta.jpeg
+├── hero-video-placeholder.mp4
+└── vite.svg
+```
 
--   ✅ `assets/` folder containing:
-    -   `index-7eQSrHYP.css` - Styles
-    -   `index-C9heMH5U.js` - JavaScript bundle
+## 🔧 **How It Works Now:**
 
-### **Static Files:**
+### **URL Structure:**
 
--   ✅ `favicon.ico` - Website icon
--   ✅ `robots.txt` - SEO robots file
--   ✅ `sitemap.xml` - SEO sitemap
--   ✅ `ta-logo.png`, `ta-logo.webp` - Logo files
--   ✅ `ta-text.png`, `ta-text.webp` - Text logo files
--   ✅ `ta.jpeg` - Hero image
--   ✅ `hero-video-placeholder.mp4` - Hero video
--   ✅ `hero-video-placeholder.webm` - Hero video (WebM format)
--   ✅ `vite.svg` - Vite logo
+-   **Home**: `yoursite.com/` or `yoursite.com/#/`
+-   **Services**: `yoursite.com/#/services`
+-   **Apps**: `yoursite.com/#/apps`
+-   **Contact**: `yoursite.com/#/contact`
 
-## 🔧 **Configuration Required**
+### **Fallback System:**
 
-### **Before Uploading:**
+-   If someone visits `yoursite.com/contact` directly, they'll be redirected to `yoursite.com/#/contact`
+-   The .htaccess file handles most routing issues
+-   HashRouter ensures the React app works properly
 
-1. **Update reCAPTCHA configuration:**
+## 📋 **Deployment Steps:**
 
-    - Go to [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
-    - Edit your site
-    - Add your Hostinger domain (e.g., `yourdomain.com`)
+1. **Upload all files** from `dist/` to Hostinger's `public_html/`
+2. **Test the main page**: `yoursite.com/`
+3. **Test navigation**: Click through the menu items
+4. **Test direct URLs**: Try `yoursite.com/contact` (should redirect)
+5. **Test the contact form**: Make sure it submits properly
 
-2. **Update Google Apps Script:**
-    - Make sure your Google Apps Script is deployed with "Anyone" access
-    - Test the script URL directly in browser
+## 🎯 **Expected Behavior:**
 
-### **After Uploading:**
+-   ✅ **Main page loads** without errors
+-   ✅ **Navigation works** (uses hash routing)
+-   ✅ **Direct URLs redirect** to hash versions
+-   ✅ **Contact form submits** to Google Sheets
+-   ✅ **reCAPTCHA works** properly
+-   ✅ **All assets load** correctly
 
-1. **Test the main page:** `yourdomain.com/`
-2. **Test navigation:** Click through menu items
-3. **Test direct URLs:** Try `yourdomain.com/contact` (should redirect)
-4. **Test contact form:** Submit a test message
-5. **Check Google Sheet:** Verify data appears
+## 🔍 **Troubleshooting:**
 
-## 🎯 **URL Structure**
-
-Your website will use hash routing for better compatibility:
-
--   **Home**: `yourdomain.com/` or `yourdomain.com/#/`
--   **Services**: `yourdomain.com/#/services`
--   **Apps**: `yourdomain.com/#/apps`
--   **Contact**: `yourdomain.com/#/contact`
-
-## ✅ **Features Included**
-
--   ✅ **reCAPTCHA v3** - Invisible spam protection
--   ✅ **Google Sheets Integration** - Automatic form data storage
--   ✅ **Form Validation** - Client-side validation with error messages
--   ✅ **Loading States** - User feedback during submission
--   ✅ **Success/Error Handling** - Clear feedback to users
--   ✅ **Responsive Design** - Works on all devices
--   ✅ **Professional Animations** - Smooth Framer Motion effects
--   ✅ **SEO Optimized** - Meta tags, sitemap, robots.txt
-
-## 🔍 **Troubleshooting**
-
-### **If main page doesn't load:**
+### **If the main page doesn't load:**
 
 -   Check that `index.html` is in the root of `public_html/`
 -   Verify file permissions (644 for files, 755 for folders)
@@ -90,34 +83,18 @@ Your website will use hash routing for better compatibility:
 
 ### **If contact form doesn't work:**
 
--   Verify reCAPTCHA site key is correct
--   Check Google Apps Script URL is accessible
+-   Verify your reCAPTCHA site key is correct
+-   Check that your Google Apps Script URL is correct
 -   Test the Google Apps Script URL directly
 
-### **If you get "connection reset" errors:**
+## 🎉 **You're All Set!**
 
--   The `.htaccess` file should handle this
--   Make sure `.htaccess` is uploaded to the root directory
+Your website should now work perfectly on Hostinger with:
 
-## 🎉 **Deployment Checklist**
+-   ✅ Proper routing
+-   ✅ Contact form functionality
+-   ✅ reCAPTCHA protection
+-   ✅ Google Sheets integration
+-   ✅ Professional design and animations
 
--   [ ] Upload all files from `dist/` to `public_html/`
--   [ ] Verify `.htaccess` file is in root directory
--   [ ] Add your domain to reCAPTCHA configuration
--   [ ] Test main page loads correctly
--   [ ] Test navigation works
--   [ ] Test contact form submission
--   [ ] Verify data appears in Google Sheet
--   [ ] Test on different devices/browsers
-
-## 🚀 **You're Ready!**
-
-Your website is fully prepared for deployment with:
-
--   Professional design and animations
--   Working contact form with spam protection
--   Automatic data storage in Google Sheets
--   SEO optimization
--   Mobile-responsive design
-
-**Upload the files and your website will be live!** 🎯
+**Upload the files and test it out!** 🚀

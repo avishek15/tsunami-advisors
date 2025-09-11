@@ -96,55 +96,14 @@ All content is defined in the `App.tsx` component. You can easily modify:
 -   Contact details
 -   Hero section content
 
-## Contact Form Features
-
-The contact form includes advanced features for production use:
-
--   **reCAPTCHA v3 Integration**: Invisible spam protection without user interaction
--   **Google Sheets Integration**: Automatic form data storage using Google Apps Script
--   **Form Validation**: Client-side validation with real-time error messages
--   **Loading States**: User feedback during form submission
--   **Success/Error Handling**: Clear feedback to users after submission
-
-### Setting up the Contact Form
-
-1. **Configure reCAPTCHA**:
-
-    - Register your site at [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
-    - Choose reCAPTCHA v3 for invisible protection
-    - Add your domain(s) to the configuration
-
-2. **Set up Google Sheets Integration**:
-
-    - Create a Google Sheet for form submissions
-    - Deploy the provided Google Apps Script as a web app
-    - Configure the script with your reCAPTCHA secret key
-
-3. **Environment Variables**:
-    ```bash
-    VITE_RECAPTCHA_SITE_KEY=your_recaptcha_site_key
-    VITE_GOOGLE_SCRIPT_URL=your_google_script_url
-    ```
-
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
-
 ## Deployment
 
-This project is optimized for static deployment and can be deployed to any static hosting service:
+This project can be deployed to any static hosting service:
 
--   **Vercel**: Connect your GitHub repository and deploy automatically (includes `vercel.json` configuration)
+-   **Vercel**: Connect your GitHub repository and deploy automatically
 -   **Netlify**: Drag and drop the `dist` folder or connect your repository
 -   **GitHub Pages**: Use the GitHub Actions workflow
 -   **AWS S3**: Upload the `dist` folder to an S3 bucket
-
-### Environment Variables for Production
-
-Set these environment variables in your deployment platform:
-
-```
-VITE_RECAPTCHA_SITE_KEY=your_recaptcha_site_key
-VITE_GOOGLE_SCRIPT_URL=your_google_script_url
-```
 
 ## Browser Support
 

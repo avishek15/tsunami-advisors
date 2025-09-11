@@ -171,12 +171,8 @@ export default function HomePage() {
                             style={{ backgroundColor: "#f0f0f0" }}
                         >
                             <source
-                                src="/hero-video-placeholder.webm"
-                                type="video/webm"
-                            />
-                            <source
-                                src="./hero-video-placeholder.webm"
-                                type="video/webm"
+                                src="/freecompress-herovideo.mp4"
+                                type="video/mp4"
                             />
                             Your browser does not support the video tag.
                         </video>
