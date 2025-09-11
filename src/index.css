@@ -405,6 +405,11 @@ body {
     color: #ffffff;
 }
 
+.header.header--home:not(.header--scrolled) .logo__insignia,
+.header.header--home:not(.header--scrolled) .logo__text-image {
+    filter: brightness(0) invert(1);
+}
+
 .header.header--home:not(.header--scrolled) .nav__link {
     color: #ffffff;
 }
