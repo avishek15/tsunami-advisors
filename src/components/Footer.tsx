@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -11,7 +12,10 @@ export default function Footer() {
                             style={{ marginBottom: "var(--space-lg)" }}
                         >
                             <picture>
-                                <source srcSet="/ta-logo.webp" type="image/webp" />
+                                <source
+                                    srcSet="/ta-logo.webp"
+                                    type="image/webp"
+                                />
                                 <img
                                     src="/ta-logo.png"
                                     alt="Tsunami Advisors Logo"
@@ -19,7 +23,10 @@ export default function Footer() {
                                 />
                             </picture>
                             <picture>
-                                <source srcSet="/ta-text.webp" type="image/webp" />
+                                <source
+                                    srcSet="/ta-text.webp"
+                                    type="image/webp"
+                                />
                                 <img
                                     src="/ta-text.png"
                                     alt="Tsunami Advisors"
@@ -38,10 +45,10 @@ export default function Footer() {
                         <div className="contact-item">
                             <Mail size={18} aria-hidden="true" />
                             <a
-                                href="mailto:info@tsunamiadvisors.com"
+                                href="mailto:contact@tsunamiadvisors.com"
                                 className="footer__link"
                             >
-                                info@tsunamiadvisors.com
+                                contact@tsunamiadvisors.com
                             </a>
                         </div>
                     </div>
@@ -52,12 +59,12 @@ export default function Footer() {
                             className="footer__links"
                             aria-label="Footer navigation"
                         >
-                            <a href="/apps" className="footer__link">
+                            <Link to="/apps" className="footer__link">
                                 Apps
-                            </a>
-                            <a href="/contact" className="footer__link">
+                            </Link>
+                            <Link to="/contact" className="footer__link">
                                 Contact
-                            </a>
+                            </Link>
                         </nav>
                     </div>
                 </div>

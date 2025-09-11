@@ -91,7 +91,7 @@ export default function ContactPage() {
                                                 Email
                                             </h3>
                                             <p className="contact-info__value">
-                                                info@tsunamiadvisors.com
+                                                contact@tsunamiadvisors.com
                                             </p>
                                             <p className="contact-info__note">
                                                 We'll respond within 24 hours

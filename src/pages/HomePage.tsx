@@ -134,11 +134,11 @@ export default function HomePage() {
         },
     ];
 
-    const whyChooseUs = [
-        "Expertise: Our team comprises seasoned professionals with extensive experience in AI and technology consulting.",
-        "Tailored Solutions: We understand that every business is unique, and we provide customized solutions to meet your specific challenges.",
-        "Proven Track Record: Our clients have successfully navigated their AI transformations with our guidance, achieving measurable results.",
-    ];
+    // const whyChooseUs = [
+    //     "Expertise: Our team comprises seasoned professionals with extensive experience in AI and technology consulting.",
+    //     "Tailored Solutions: We understand that every business is unique, and we provide customized solutions to meet your specific challenges.",
+    //     "Proven Track Record: Our clients have successfully navigated their AI transformations with our guidance, achieving measurable results.",
+    // ];
 
     return (
         <>
@@ -189,15 +189,16 @@ export default function HomePage() {
                                 transition={{ duration: 0.8 }}
                             >
                                 <h1 className="text-hero">
-                                    Transforming the Future of{" "}
+                                    Transform the Future through <br />
                                     <span className="text-accent">
-                                        AI and Tech
+                                        AI and Technology
                                     </span>
                                 </h1>
                                 <p className="text-body-large text-muted hero__description">
-                                    Comprehensive AI advisory and consulting
-                                    services designed to transform your business
-                                    and deliver real results
+                                    We leverage AI to drive revenue growth,
+                                    optimize costs, enhance operational
+                                    efficiency, and develop innovative business
+                                    models, delivering measurable results.
                                 </p>
                                 <div className="btn-group">
                                     <Link to="/contact">
