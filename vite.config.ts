@@ -10,9 +10,24 @@ export default defineConfig({
         outDir: "dist",
         assetsDir: "assets",
         sourcemap: false,
+        minify: "terser",
         rollupOptions: {
             output: {
-                manualChunks: undefined,
+                manualChunks: {
+                    vendor: ['react', 'react-dom'],
+                    router: ['react-router-dom'],
+                    motion: ['framer-motion'],
+                    icons: ['lucide-react']
+                },
+                chunkFileNames: 'assets/[name]-[hash].js',
+                entryFileNames: 'assets/[name]-[hash].js',
+                assetFileNames: 'assets/[name]-[hash].[ext]'
+            },
+        },
+        terserOptions: {
+            compress: {
+                drop_console: true,
+                drop_debugger: true,
             },
         },
     },
