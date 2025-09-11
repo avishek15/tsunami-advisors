@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { CONFIG } from "./config/constants";

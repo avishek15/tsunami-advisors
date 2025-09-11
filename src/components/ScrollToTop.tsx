@@ -6,7 +6,17 @@ export default function ScrollToTop() {
 
     useEffect(() => {
         // Scroll to top when pathname changes
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+        
+        // Fallback for older browsers
+        if (!window.scrollTo) {
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        }
     }, [pathname]);
 
     return null;
