@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
 import {
     Mail,
-    Calculator,
-    BarChart3,
-    Brain,
-    TrendingUp,
     ChevronDown,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import ContactForm from "../components/ContactForm";
 
