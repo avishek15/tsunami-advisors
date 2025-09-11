@@ -304,7 +304,7 @@ export default function ContactForm() {
                         <option value="ai-agents-tools-automation">
                             AI Agents, Tools & Automation
                         </option>
-                        <option value="ai-training">AI Training</option>
+                        <option value="ai-training">AI Education and Training</option>
                         <option value="other">Other</option>
                     </select>
                 </div>

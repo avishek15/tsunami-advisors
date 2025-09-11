@@ -65,7 +65,7 @@ export default function HomePage() {
             {
                 "@type": "Service",
                 position: 6,
-                name: "AI Training",
+                name: "AI Education and Training",
                 description:
                     "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
             },
@@ -122,7 +122,7 @@ export default function HomePage() {
         },
         {
             icon: GraduationCap,
-            title: "AI Training",
+            title: "AI Education and Training",
             description:
                 "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
             features: [
