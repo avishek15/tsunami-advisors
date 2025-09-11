@@ -44,7 +44,7 @@ export default function ServicesPage() {
                 position: 6,
                 name: "AI Education and Training",
                 description:
-                    "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
+                    "Transform your workforce into AI-ready professionals through comprehensive education programs that build confidence, competence, and competitive advantage in the AI-driven marketplace.",
             },
         ],
     };
@@ -101,7 +101,7 @@ export default function ServicesPage() {
             icon: GraduationCap,
             title: "AI Education and Training",
             description:
-                "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
+                "Transform your workforce into AI-ready professionals through comprehensive education programs that build confidence, competence, and competitive advantage in the AI-driven marketplace.",
             features: [
                 "Customized Workshops: Tailored sessions that address your specific challenges and opportunities in AI.",
                 "Continuous Learning: Ongoing training options to keep your teams ahead of the curve.",

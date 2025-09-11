@@ -4,6 +4,7 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { CONFIG } from "./config/constants";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import AppsPage from "./pages/AppsPage";
@@ -22,6 +23,7 @@ function App() {
                 }}
             >
                 <Router>
+                    <ScrollToTop />
                     <div className="min-h-screen bg-white">
                         <Header />
                         <main>

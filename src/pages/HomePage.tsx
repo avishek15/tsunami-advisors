@@ -67,7 +67,7 @@ export default function HomePage() {
                 position: 6,
                 name: "AI Education and Training",
                 description:
-                    "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
+                    "Transform your workforce into AI-ready professionals through comprehensive education programs that build confidence, competence, and competitive advantage in the AI-driven marketplace.",
             },
         ],
     };
@@ -124,7 +124,7 @@ export default function HomePage() {
             icon: GraduationCap,
             title: "AI Education and Training",
             description:
-                "Empower your teams with the knowledge and skills needed to leverage AI effectively at all levels.",
+                "Transform your workforce into AI-ready professionals through comprehensive education programs that build confidence, competence, and competitive advantage in the AI-driven marketplace.",
             features: [
                 "Customized Workshops: Tailored sessions that address your specific challenges and opportunities in AI.",
                 "Continuous Learning: Ongoing training options to keep your teams ahead of the curve.",
@@ -293,7 +293,7 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                {/* Why Choose Us Section */}
+                {/* Apps Section */}
                 <section className="cta-section section">
                     <div className="container">
                         <motion.div
@@ -305,31 +305,38 @@ export default function HomePage() {
                             style={{ marginBottom: "var(--space-4xl)" }}
                         >
                             <h2 className="text-heading">
-                                Why Choose Tsunami Advisors?
+                                Try Our AI-Powered Applications
                             </h2>
                             <p className="text-body-large">
-                                We bring expertise, tailored solutions, and
-                                proven results to every engagement
+                                Experience our AI solutions firsthand with our
+                                free-to-use applications. Simply sign in with
+                                your email to get started and explore the power
+                                of AI.
                             </p>
                         </motion.div>
 
-                        <div className="why-choose-grid">
-                            {whyChooseUs.map((reason, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{
-                                        duration: 0.6,
-                                        delay: index * 0.2,
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className="text-center"
+                        >
+                            <Link to="/apps">
+                                <motion.button
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    className="btn btn--primary"
+                                    style={{
+                                        fontSize: "var(--font-size-lg)",
+                                        padding:
+                                            "var(--space-lg) var(--space-2xl)",
                                     }}
-                                    viewport={{ once: true }}
-                                    className="why-choose-card"
                                 >
-                                    <p className="text-body">{reason}</p>
-                                </motion.div>
-                            ))}
-                        </div>
+                                    Explore Our Apps
+                                </motion.button>
+                            </Link>
+                        </motion.div>
                     </div>
                 </section>
             </div>
