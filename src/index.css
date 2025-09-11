@@ -371,14 +371,20 @@ body {
     text-decoration: none;
     color: var(--color-text);
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
     padding: var(--space-sm) 0;
     white-space: nowrap;
+    position: relative;
+    border-top: 3px solid transparent;
 }
 
-.nav__link:hover,
+.nav__link:hover {
+    color: var(--color-accent);
+}
+
 .nav__link--active {
     color: var(--color-accent);
+    border-top-color: var(--color-accent);
 }
 
 /* Mobile Menu Button */
@@ -456,13 +462,19 @@ body {
     text-decoration: none;
     font-weight: 500;
     border-bottom: 1px solid rgba(30, 41, 59, 0.1);
+    border-top: 3px solid transparent;
     transition: all 0.2s ease;
 }
 
-.mobile-menu__link:hover,
+.mobile-menu__link:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+}
+
 .mobile-menu__link--active {
     background-color: var(--color-accent);
     color: var(--color-background);
+    border-top-color: var(--color-background);
 }
 
 .mobile-menu__link:last-child {

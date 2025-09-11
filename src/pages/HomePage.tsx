@@ -195,9 +195,9 @@ export default function HomePage() {
                                     </span>
                                 </h1>
                                 <p className="text-body-large text-muted hero__description">
-                                    Comprehensive AI ADVISORY AND consulting
+                                    Comprehensive AI advisory and consulting
                                     services designed to transform your business
-                                    and DELIVER REAL RESULTS
+                                    and deliver real results
                                 </p>
                                 <div className="btn-group">
                                     <Link to="/contact">
