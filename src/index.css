@@ -324,11 +324,26 @@ body {
 /* Mobile: Show only insignia */
 @media (max-width: 767px) {
     .logo__text-image {
-        display: none;
+        /* display: none; */
+        display: block;
+        height: 6rem;
+        margin-left: 0.125rem;
     }
 
     .logo__insignia {
         height: 3rem;
+    }
+}
+
+/* Tablet: Medium sizes */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo__text-image {
+        display: block;
+        height: 6rem;
+    }
+
+    .logo__insignia {
+        height: 2.5rem;
     }
 }
 
