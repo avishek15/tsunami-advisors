@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import {
-    Mail,
-    ChevronDown,
-} from "lucide-react";
+import { Mail, ChevronDown } from "lucide-react";
 import SEO from "../components/SEO";
 import ContactForm from "../components/ContactForm";
 
@@ -41,7 +38,7 @@ export default function ContactPage() {
                     className="section section--hero"
                     style={{
                         backgroundImage:
-                            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+                            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
