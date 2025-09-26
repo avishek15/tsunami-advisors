@@ -24,6 +24,15 @@ export default function AppsPage() {
             {
                 "@type": "SoftwareApplication",
                 position: 1,
+                name: "DocuChat",
+                description:
+                    "Advanced multi-document AI chat application that enables intelligent cross-referencing and analysis across multiple PDFs. Upload multiple documents and engage in sophisticated conversations that span your entire document collection.",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web Browser",
+            },
+            {
+                "@type": "SoftwareApplication",
+                position: 2,
                 name: "AI ROI Calculator",
                 description:
                     "Calculate the potential return on investment for AI implementations in your business.",
@@ -32,7 +41,7 @@ export default function AppsPage() {
             },
             {
                 "@type": "SoftwareApplication",
-                position: 2,
+                position: 3,
                 name: "Data Analytics Dashboard",
                 description:
                     "Interactive dashboard for visualizing and analyzing your business data with AI insights.",
@@ -41,7 +50,7 @@ export default function AppsPage() {
             },
             {
                 "@type": "SoftwareApplication",
-                position: 3,
+                position: 4,
                 name: "AI Strategy Planner",
                 description:
                     "Step-by-step tool to help you plan and implement AI strategies for your organization.",
@@ -50,7 +59,7 @@ export default function AppsPage() {
             },
             {
                 "@type": "SoftwareApplication",
-                position: 4,
+                position: 5,
                 name: "Market Analysis Tool",
                 description:
                     "AI-powered market analysis and competitive intelligence for your industry.",
@@ -59,7 +68,7 @@ export default function AppsPage() {
             },
             {
                 "@type": "SoftwareApplication",
-                position: 5,
+                position: 6,
                 name: "Process Optimization",
                 description:
                     "Identify and optimize business processes using AI-driven recommendations.",
@@ -68,25 +77,24 @@ export default function AppsPage() {
             },
             {
                 "@type": "SoftwareApplication",
-                position: 6,
+                position: 7,
                 name: "AI Readiness Assessment",
                 description:
                     "Evaluate your organization's readiness for AI transformation and get personalized recommendations.",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web Browser",
             },
-            {
-                "@type": "SoftwareApplication",
-                position: 7,
-                name: "Chat with PDF",
-                description:
-                    "Upload any PDF and chat with it using AI. Ask questions, get summaries, and extract insights from your documents.",
-                applicationCategory: "BusinessApplication",
-                operatingSystem: "Web Browser",
-            },
         ],
     };
     const apps = [
+        {
+            icon: FileText,
+            title: "DocuChat",
+            description:
+                "Advanced multi-document AI chat application that enables intelligent cross-referencing and analysis across multiple PDFs. Upload multiple documents and engage in sophisticated conversations that span your entire document collection.",
+            status: "Live",
+            link: "https://docuchat.tsunamiadvisors.com",
+        },
         {
             icon: Calculator,
             title: "AI ROI Calculator",
@@ -128,14 +136,6 @@ export default function AppsPage() {
             description:
                 "Evaluate your organization's readiness for AI transformation and get personalized recommendations.",
             status: "Coming Soon",
-        },
-        {
-            icon: FileText,
-            title: "Chat with PDF",
-            description:
-                "Upload any PDF and chat with it using AI. Ask questions, get summaries, and extract insights from your documents.",
-            status: "Live",
-            link: "/chat-pdf",
         },
     ];
 
@@ -277,12 +277,23 @@ export default function AppsPage() {
                                             {app.status}
                                         </span>
                                         {app.link ? (
-                                            <Link
-                                                to={app.link}
-                                                className="app-card__link"
-                                            >
-                                                Launch App →
-                                            </Link>
+                                            app.link.startsWith("http") ? (
+                                                <a
+                                                    href={app.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="app-card__link"
+                                                >
+                                                    Launch App →
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    to={app.link}
+                                                    className="app-card__link"
+                                                >
+                                                    Launch App →
+                                                </Link>
+                                            )
                                         ) : (
                                             <button
                                                 disabled
