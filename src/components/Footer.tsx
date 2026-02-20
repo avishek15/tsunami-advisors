@@ -35,8 +35,9 @@ export default function Footer() {
                             </picture>
                         </div>
                         <p className="text-body text-muted">
-                            Transforming the future of AI and tech through
-                            strategic guidance and innovative solutions.
+                            We empower organizations to harness AI—from
+                            strategy to execution. Accelerate your AI journey
+                            with clarity, confidence, and measurable impact.
                         </p>
                     </div>
 

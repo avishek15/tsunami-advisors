@@ -10,7 +10,7 @@ export default function ContactPage() {
         "@type": "ContactPage",
         name: "Contact Tsunami Advisors",
         description:
-            "Get in touch with Tsunami Advisors for AI consulting services and business transformation solutions.",
+            "Contact Tsunami Advisors today at contact@tsunamiadvisors.com to explore how we can accelerate your AI transformation.",
         url: "https://tsunamiadvisors.com/contact",
         mainEntity: {
             "@type": "Organization",
@@ -27,7 +27,7 @@ export default function ContactPage() {
         <>
             <SEO
                 title="Contact Us - AI Consulting Services"
-                description="Ready to transform your business with AI? Contact Tsunami Advisors today. Our expert team is ready to discuss your AI transformation strategy and help you navigate the future of technology."
+                description="Contact us today at contact@tsunamiadvisors.com to explore how we can accelerate your AI transformation. Tsunami Advisors empowers organizations to harness AI—from strategy to execution."
                 keywords="contact AI consulting, AI transformation consultation, business AI strategy, AI consulting services contact, artificial intelligence consulting"
                 canonical="/contact"
                 structuredData={contactStructuredData}
@@ -38,7 +38,7 @@ export default function ContactPage() {
                     className="section section--hero"
                     style={{
                         backgroundImage:
-                            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
+                            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/contact-hero-bg.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
@@ -78,10 +78,19 @@ export default function ContactPage() {
                                     textShadow: "0 1px 2px rgba(0, 0, 0, 0.7)",
                                 }}
                             >
-                                Ready to transform your business with AI? Let's
-                                discuss how Tsunami Advisors can help you
-                                navigate the future of technology and
-                                innovation.
+                                Contact us today at{" "}
+                                <a
+                                    href="mailto:contact@tsunamiadvisors.com"
+                                    style={{
+                                        color: "white",
+                                        textDecoration: "underline",
+                                        textUnderlineOffset: "0.2em",
+                                    }}
+                                >
+                                    contact@tsunamiadvisors.com
+                                </a>{" "}
+                                to explore how we can accelerate your AI
+                                transformation.
                             </p>
                         </motion.div>
                     </div>

@@ -13,7 +13,7 @@ export default function HomePage() {
         url: "https://tsunamiadvisors.com",
         logo: "https://tsunamiadvisors.com/ta-logo.png",
         description:
-            "Leading AI consulting firm specializing in AI transformation strategy, go-to-market execution, and predictive analytics for businesses.",
+            "Tsunami Advisors empowers organizations to harness the transformative potential of AI—from strategy to execution. We accelerate your AI journey with clarity, confidence, and measurable impact.",
         address: {
             "@type": "PostalAddress",
             addressCountry: "US",
@@ -121,8 +121,8 @@ export default function HomePage() {
         <>
             <SEO
                 title="AI & Tech Consulting Services"
-                description="Transform your business with Tsunami Advisors' expert AI consulting services. We specialize in AI transformation strategy, go-to-market execution, predictive analytics, and AI training. Get started with your AI journey today."
-                keywords="AI consulting, artificial intelligence consulting, AI transformation strategy, go-to-market strategy, predictive analytics, AI training, business automation, AI implementation, technology consulting"
+                description="Tsunami Advisors empowers organizations to harness AI—from strategy to execution. We accelerate your AI journey with clarity, confidence, and measurable impact. Contact us to explore your AI transformation."
+                keywords="AI consulting, artificial intelligence consulting, AI transformation, AI strategy, AI assessment, AI agents, business automation, AI implementation, technology consulting"
                 canonical="/"
                 structuredData={[
                     organizationStructuredData,
@@ -172,10 +172,10 @@ export default function HomePage() {
                                     </span>
                                 </h1>
                                 <p className="text-body-large text-muted hero__description">
-                                    We leverage AI to drive revenue growth,
-                                    optimize costs, enhance operational
-                                    efficiency, and develop innovative business
-                                    models, delivering measurable results.
+                                    We empower organizations to harness
+                                    AI—from strategy to execution. Our mission:
+                                    accelerate your AI journey with clarity,
+                                    confidence, and measurable impact.
                                 </p>
                                 <div className="btn-group">
                                     <Link to="/contact">
@@ -273,6 +273,43 @@ export default function HomePage() {
                                 </motion.div>
                             ))}
                         </div>
+                    </div>
+                </section>
+
+                {/* Who We Are Section */}
+                <section className="section">
+                    <div className="container">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="text-center"
+                            style={{
+                                maxWidth: "48rem",
+                                margin: "0 auto",
+                            }}
+                        >
+                            <h2 className="text-heading">Who We Are</h2>
+                            <p className="text-body-large text-muted">
+                                We specialize in building AI strategies that
+                                drive growth, assess readiness to uncover
+                                opportunities, and implement AI applications,
+                                agents, and tools that redefine how businesses
+                                operate. Whether you're shaping your long-term
+                                vision or optimizing daily workflows, we provide
+                                the expertise to make AI a tangible driver of
+                                innovation and performance.
+                            </p>
+                            <p className="text-body-large text-muted">
+                                We combine strategic insight, technical
+                                excellence, and a deep understanding of
+                                emerging technology trends to help leaders
+                                unlock new business models, scale
+                                intelligently, and communicate their AI vision
+                                with confidence.
+                            </p>
+                        </motion.div>
                     </div>
                 </section>
 
