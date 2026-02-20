@@ -38,7 +38,7 @@ export default function ContactPage() {
                     className="section section--hero"
                     style={{
                         backgroundImage:
-                            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/contact-hero-bg.png')",
+                            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/contact-hero-bg.png')",
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",

@@ -48,9 +48,10 @@ export default function ServicesPage() {
             description:
                 "Know exactly where AI fits—and where it doesn't. We build a roadmap that turns investment into competitive advantage, not scattered experiments.",
             features: [
-                "Strategic Alignment: See how AI supports your priorities—no guesswork.",
+                "Strategic Alignment: See exactly how AI supports your goals—no guesswork.",
                 "Capability Roadmapping: Know what you need (data, talent, infrastructure) before you spend.",
-                "Scalability Planning: Turn pilots into systems that scale and deliver.",
+                "Investment Governance: Spend on what moves the needle—with frameworks that keep innovation responsible.",
+                "Scalability Planning: Turn pilots into systems that scale and deliver measurable results.",
             ],
         },
         {
@@ -59,8 +60,9 @@ export default function ServicesPage() {
             description:
                 "Stop wondering if you're ready. Get a clear picture of your AI maturity—and a prioritized plan to close gaps and capture ROI.",
             features: [
-                "Maturity Diagnostics: Understand your current AI competencies, infrastructure, and data.",
+                "Maturity Diagnostics: Understand where you stand—competencies, infrastructure, and data.",
                 "Opportunity Mapping: Find high-value areas where AI delivers the fastest wins.",
+                "Risk Review: Spot compliance and security gaps before they slow you down.",
                 "Readiness Roadmap: Get actionable next steps, not a report that sits on a shelf.",
             ],
         },
@@ -71,7 +73,8 @@ export default function ServicesPage() {
                 "Stop doing manual work AI can handle. We help you deploy the right tools—and get them working where they matter most.",
             features: [
                 "Solution Identification: Match AI technologies to your needs—no vendor hype.",
-                "Integration Support: Connect AI tools to your existing systems—no rip-and-replace.",
+                "Deployment Strategy: Roll out across operations, marketing, and customer engagement—fast.",
+                "Integration Support: Connect to your existing systems—no rip-and-replace.",
                 "Performance Optimization: Monitor, refine, and scale to maximize value and ROI.",
             ],
         },
@@ -83,7 +86,8 @@ export default function ServicesPage() {
             features: [
                 "Agent Design: Define use cases and build agents that fit your operations.",
                 "Workflow Automation: Offload repetitive processes so talent works on strategy.",
-                "Performance Management: Keep agents reliable, accurate, and aligned with business impact.",
+                "Adaptive Intelligence: Agents that learn—with language understanding and predictive modeling.",
+                "Performance Management: Keep agents reliable, accurate, and delivering business impact.",
             ],
         },
     ];
