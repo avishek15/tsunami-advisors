@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Target, Bot, GraduationCap, Lightbulb } from "lucide-react";
+import { Brain, ClipboardCheck, Layers, Bot } from "lucide-react";
 import SEO from "../components/SEO";
 
 export default function ServicesPage() {
@@ -14,115 +14,92 @@ export default function ServicesPage() {
             {
                 "@type": "Service",
                 position: 1,
-                name: "AI Strategy & Investor Relations",
+                name: "AI Strategy",
                 description:
-                    "Comprehensive AI transformation strategies combined with investor relations expertise to help you integrate AI into your operations and communicate your vision effectively to attract and retain investors.",
+                    "Build a roadmap that turns AI investment into competitive advantage. Strategic alignment, capability roadmapping, and scalability planning.",
             },
             {
                 "@type": "Service",
                 position: 2,
-                name: "Go to Market Strategy & Execution",
+                name: "AI Assessment",
                 description:
-                    "Comprehensive go-to-market strategy to effectively launch and position your AI initiatives in the market.",
+                    "Get a clear picture of your AI maturity and a prioritized plan to close gaps and capture ROI.",
             },
             {
                 "@type": "Service",
                 position: 3,
-                name: "New AI Business Models",
+                name: "AI Applications & Tools",
                 description:
-                    "Develop innovative AI-driven business models and revenue streams that leverage artificial intelligence to create new value propositions and competitive advantages.",
+                    "Deploy the right AI tools and get them working where they matter most. Integration and performance optimization.",
             },
             {
                 "@type": "Service",
                 position: 4,
-                name: "AI Agents, Tools & Automation",
+                name: "AI Agents",
                 description:
-                    "Comprehensive AI-driven operations automation combined with advanced data analytics and predictive modeling to optimize business processes and unlock data-driven insights.",
-            },
-            {
-                "@type": "Service",
-                position: 6,
-                name: "AI Education and Training",
-                description:
-                    "Transform your workforce into AI-ready professionals through comprehensive education programs that build confidence, competence, and competitive advantage in the AI-driven marketplace.",
+                    "Design, deploy, and tune AI agents that automate repetitive work and free your team for strategic tasks.",
             },
         ],
     };
     const services = [
         {
             icon: Brain,
-            title: "AI Strategy & Investor Relations",
+            title: "AI Strategy",
             description:
-                "Comprehensive AI transformation strategies combined with investor relations expertise to help you integrate AI into your operations and communicate your vision effectively to attract and retain investors.",
+                "Know exactly where AI fits—and where it doesn't. We build a roadmap that turns investment into competitive advantage, not scattered experiments.",
             features: [
-                "AI Strategy Development: We collaborate with you to create a robust AI strategy that aligns with your business goals.",
-                "Implementation Roadmaps: Our detailed roadmaps outline the steps necessary to integrate AI technologies.",
-                "Pitch Development: Craft compelling narratives that highlight your AI initiatives and their market potential.",
-                "Stakeholder Engagement: Build strong relationships with investors through transparent communication.",
+                "Strategic Alignment: See how AI supports your priorities—no guesswork.",
+                "Capability Roadmapping: Know what you need (data, talent, infrastructure) before you spend.",
+                "Scalability Planning: Turn pilots into systems that scale and deliver.",
             ],
         },
         {
-            icon: Target,
-            title: "Go to Market Strategy & Execution",
+            icon: ClipboardCheck,
+            title: "AI Assessment",
             description:
-                "Comprehensive go-to-market strategy to effectively launch and position your AI initiatives in the market.",
+                "Stop wondering if you're ready. Get a clear picture of your AI maturity—and a prioritized plan to close gaps and capture ROI.",
             features: [
-                "Market Insights and Value Proposition: Conduct thorough market analysis and craft compelling value propositions.",
-                "Commercialization and Performance Metrics: Execute structured commercialization plans with KPIs to measure success.",
-                "Customer Segmentation and Targeting: Identify and segment target customer groups to optimize marketing and sales efforts.",
-                "Competitive Positioning and Launch Strategy: Develop strategic positioning against competitors and execute comprehensive launch plans.",
+                "Maturity Diagnostics: Understand your current AI competencies, infrastructure, and data.",
+                "Opportunity Mapping: Find high-value areas where AI delivers the fastest wins.",
+                "Readiness Roadmap: Get actionable next steps, not a report that sits on a shelf.",
             ],
         },
         {
-            icon: Lightbulb,
-            title: "New AI Business Models",
+            icon: Layers,
+            title: "AI Applications & Tools",
             description:
-                "Develop innovative AI-driven business models and revenue streams that leverage artificial intelligence to create new value propositions and competitive advantages.",
+                "Stop doing manual work AI can handle. We help you deploy the right tools—and get them working where they matter most.",
             features: [
-                "Business Model Innovation: Design new revenue streams and value propositions powered by AI technologies.",
-                "Market Disruption Strategy: Identify opportunities to disrupt traditional markets with AI-driven solutions.",
-                "Revenue Optimization: Develop pricing strategies and monetization models for AI-powered products and services.",
-                "Partnership and Ecosystem Development: Build strategic partnerships and ecosystems to support new AI business models.",
+                "Solution Identification: Match AI technologies to your needs—no vendor hype.",
+                "Integration Support: Connect AI tools to your existing systems—no rip-and-replace.",
+                "Performance Optimization: Monitor, refine, and scale to maximize value and ROI.",
             ],
         },
         {
             icon: Bot,
-            title: "AI Agents, Tools & Automation",
+            title: "AI Agents",
             description:
-                "Comprehensive AI-driven operations automation combined with advanced data analytics and predictive modeling to optimize business processes and unlock data-driven insights.",
+                "Let AI handle the repetitive. Your team focuses on what only humans can do. We design, deploy, and tune agents that deliver.",
             features: [
-                "Process Evaluation: Identify processes that can benefit from automation and streamline operations.",
-                "Implementation Support: Ensure a smooth integration of AI agents into your existing workflows.",
-                "Data Strategy: Develop a comprehensive strategy for data collection, management, and analysis.",
-                "Predictive Insights: Utilize predictive analytics to foresee trends and make proactive business decisions.",
-            ],
-        },
-        {
-            icon: GraduationCap,
-            title: "AI Education and Training",
-            description:
-                "Transform your workforce into AI-ready professionals through comprehensive education programs that build confidence, competence, and competitive advantage in the AI-driven marketplace.",
-            features: [
-                "Customized Workshops: Tailored sessions that address your specific challenges and opportunities in AI.",
-                "Continuous Learning: Ongoing training options to keep your teams ahead of the curve.",
-                "Leadership Development: Executive training programs to help leaders understand and drive AI transformation.",
-                "Certification Programs: Structured certification paths to validate AI skills and knowledge across your organization.",
+                "Agent Design: Define use cases and build agents that fit your operations.",
+                "Workflow Automation: Offload repetitive processes so talent works on strategy.",
+                "Performance Management: Keep agents reliable, accurate, and aligned with business impact.",
             ],
         },
     ];
 
     const whyChooseUs = [
-        "Expertise: Our team comprises seasoned professionals with extensive experience in AI and technology consulting.",
-        "Tailored Solutions: We understand that every business is unique, and we provide customized solutions to meet your specific challenges.",
-        "Proven Track Record: Our clients have successfully navigated their AI transformations with our guidance, achieving measurable results.",
+        "Expertise: Deep experience in AI and technology—we've seen what works and what doesn't.",
+        "Tailored Solutions: Your business isn't generic. Neither are we.",
+        "Proven Track Record: Clients get measurable results—not promises.",
     ];
 
     return (
         <>
             <SEO
                 title="AI Consulting Services"
-                description="Comprehensive AI consulting services including transformation strategy, go-to-market execution, predictive analytics, and AI training. Transform your business with expert AI guidance."
-                keywords="AI consulting services, AI transformation strategy, go-to-market strategy, predictive analytics, AI training, business automation, AI implementation, technology consulting"
+                description="AI Strategy, Assessment, Applications & Tools, and AI Agents. Stop guessing—get a roadmap that turns AI into measurable advantage."
+                keywords="AI consulting services, AI strategy, AI assessment, AI applications, AI agents, AI transformation, business automation, AI implementation, technology consulting"
                 canonical="/services"
                 structuredData={servicesStructuredData}
             />
@@ -145,8 +122,8 @@ export default function ServicesPage() {
                                 className="text-body-large text-muted"
                                 style={{ maxWidth: "48rem", margin: "0 auto" }}
                             >
-                                Comprehensive AI consulting services designed to
-                                transform your business and drive innovation
+                                Stop guessing. Start executing. Four ways we
+                                help you turn AI into measurable advantage.
                             </p>
                         </motion.div>
                     </div>
@@ -157,12 +134,17 @@ export default function ServicesPage() {
                     <div className="container">
                         <div className="services-grid">
                             {services.map((service, index) => (
-                                <div
+                                <motion.div
                                     key={service.title}
-                                    className="service-card card"
-                                    style={{
-                                        animationDelay: `${index * 0.1}s`,
+                                    initial={{ opacity: 0, y: 40 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{
+                                        duration: 0.6,
+                                        delay: index * 0.1,
+                                        ease: [0.22, 1, 0.36, 1],
                                     }}
+                                    viewport={{ once: true, margin: "-40px" }}
+                                    className="service-card card"
                                 >
                                     <div className="service-card__icon">
                                         <service.icon size={28} />
@@ -186,7 +168,7 @@ export default function ServicesPage() {
                                             )
                                         )}
                                     </ul>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
@@ -207,8 +189,8 @@ export default function ServicesPage() {
                                 Why Choose Tsunami Advisors?
                             </h2>
                             <p className="text-body-large">
-                                We bring expertise, tailored solutions, and
-                                proven results to every engagement
+                                Expertise that cuts through the hype. Results
+                                that show up on your bottom line.
                             </p>
                         </motion.div>
 
