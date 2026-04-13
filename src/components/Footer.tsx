@@ -46,10 +46,10 @@ export default function Footer() {
                         <div className="contact-item">
                             <Mail size={18} aria-hidden="true" />
                             <a
-                                href="mailto:contact@tsunamiadvisors.com"
+                                href="mailto:info@tsunamiadvisors.com"
                                 className="footer__link"
                             >
-                                contact@tsunamiadvisors.com
+                                info@tsunamiadvisors.com
                             </a>
                         </div>
                     </div>

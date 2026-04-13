@@ -21,7 +21,7 @@ export default function HomePage() {
         contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer service",
-            email: "contact@tsunamiadvisors.com",
+            email: "info@tsunamiadvisors.com",
         },
         sameAs: ["https://linkedin.com/company/tsunami-advisors"],
     };
