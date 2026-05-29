@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { CONTACT_EMAIL } from "../config/constants";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Brain, ClipboardCheck, Layers, Bot } from "lucide-react";
@@ -21,7 +22,7 @@ export default function HomePage() {
         contactPoint: {
             "@type": "ContactPoint",
             contactType: "customer service",
-            email: "info@tsunamiadvisors.com",
+            email: CONTACT_EMAIL,
         },
         sameAs: ["https://linkedin.com/company/tsunami-advisors"],
     };

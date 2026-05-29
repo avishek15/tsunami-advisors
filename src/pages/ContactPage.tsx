@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, ChevronDown } from "lucide-react";
 import SEO from "../components/SEO";
 import ContactForm from "../components/ContactForm";
+import { CONTACT_EMAIL } from "../config/constants";
 
 export default function ContactPage() {
     // Structured data for contact information
@@ -10,7 +11,7 @@ export default function ContactPage() {
         "@type": "ContactPage",
         name: "Contact Tsunami Advisors",
         description:
-            "Contact Tsunami Advisors today at info@tsunamiadvisors.com to explore how we can accelerate your AI transformation.",
+            `Contact Tsunami Advisors today at ${CONTACT_EMAIL} to explore how we can accelerate your AI transformation.`,
         url: "https://tsunamiadvisors.com/contact",
         mainEntity: {
             "@type": "Organization",
@@ -18,7 +19,7 @@ export default function ContactPage() {
             contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer service",
-                email: "info@tsunamiadvisors.com",
+                email: CONTACT_EMAIL,
                 availableLanguage: "English",
             },
         },
@@ -27,7 +28,7 @@ export default function ContactPage() {
         <>
             <SEO
                 title="Contact Us - AI Consulting Services"
-                description="Contact us today at info@tsunamiadvisors.com to explore how we can accelerate your AI transformation. Tsunami Advisors empowers organizations to harness AI—from strategy to execution."
+                description={`Contact us today at ${CONTACT_EMAIL} to explore how we can accelerate your AI transformation. Tsunami Advisors empowers organizations to harness AI—from strategy to execution.`}
                 keywords="contact AI consulting, AI transformation consultation, business AI strategy, AI consulting services contact, artificial intelligence consulting"
                 canonical="/contact"
                 structuredData={contactStructuredData}
@@ -80,14 +81,14 @@ export default function ContactPage() {
                             >
                                 Contact us today at{" "}
                                 <a
-                                    href="mailto:info@tsunamiadvisors.com"
+                                    href={`mailto:${CONTACT_EMAIL}`}
                                     style={{
                                         color: "white",
                                         textDecoration: "underline",
                                         textUnderlineOffset: "0.2em",
                                     }}
                                 >
-                                    info@tsunamiadvisors.com
+                                    {CONTACT_EMAIL}
                                 </a>{" "}
                                 to explore how we can accelerate your AI
                                 transformation.
@@ -147,7 +148,7 @@ export default function ContactPage() {
                                                 Email
                                             </h3>
                                             <p className="contact-info__value">
-                                                info@tsunamiadvisors.com
+                                                {CONTACT_EMAIL}
                                             </p>
                                             <p className="contact-info__note">
                                                 We'll respond within 24 hours

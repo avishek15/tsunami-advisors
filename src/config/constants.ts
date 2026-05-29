@@ -1,6 +1,8 @@
 // Configuration constants for the application
 // Update these values with your actual keys and URLs
 
+export const CONTACT_EMAIL = "info@tsunamiadvisors.com";
+
 export const CONFIG = {
     // reCAPTCHA Configuration
     // Get your site key from: https://www.google.com/recaptcha/admin

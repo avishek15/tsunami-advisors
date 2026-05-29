@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CONTACT_EMAIL } from "../config/constants";
 
 export default function Footer() {
     return (
@@ -46,10 +47,10 @@ export default function Footer() {
                         <div className="contact-item">
                             <Mail size={18} aria-hidden="true" />
                             <a
-                                href="mailto:info@tsunamiadvisors.com"
+                                href={`mailto:${CONTACT_EMAIL}`}
                                 className="footer__link"
                             >
-                                info@tsunamiadvisors.com
+                                {CONTACT_EMAIL}
                             </a>
                         </div>
                     </div>
