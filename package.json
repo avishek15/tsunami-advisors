@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "python3 scripts/deploy-hostinger.py",
+    "deploy:upload": "python3 scripts/deploy-hostinger.py --skip-build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",

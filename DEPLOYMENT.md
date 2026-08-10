@@ -54,6 +54,29 @@ dist/
 
 ## 📋 **Deployment Steps:**
 
+### Automated (recommended)
+
+1. Copy `.env.deploy.example` to `.env.deploy` and add your Hostinger FTP credentials.
+2. Run:
+
+```bash
+npm run deploy
+```
+
+This builds `dist/` and uploads via FTP. To upload an existing build without rebuilding:
+
+```bash
+npm run deploy:upload
+```
+
+Dry-run (list files only):
+
+```bash
+python3 scripts/deploy-hostinger.py --dry-run
+```
+
+### Manual
+
 1. **Upload all files** from `dist/` to Hostinger's `public_html/`
 2. **Test the main page**: `yoursite.com/`
 3. **Test navigation**: Click through the menu items
